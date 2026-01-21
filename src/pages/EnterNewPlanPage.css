@@ -1,0 +1,252 @@
+.enter-new-plan-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f8f6;
+    position: relative;
+    /* Make page relative for any absolute children if needed, though we are moving arrow */
+}
+
+.enter-new-plan-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.arrow-back-wrapper {
+    position: absolute;
+    top: 81px;
+    left: 8px;
+    z-index: 10;
+}
+
+@media (max-width: 900px) {
+    .arrow-back-wrapper {
+        display: none;
+    }
+}
+
+.enter-new-plan-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px;
+    gap: 16px;
+    width: 100%;
+    /* Ensure full width availability */
+}
+
+.enter-new-plan-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    /* Increased to allow full content width without internal scroll */
+    overflow-y: auto;
+    max-height: 600px;
+    /* Approx 13 rows */
+}
+
+/* Header row */
+.table-header-row {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.table-header-cell {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    min-height: 64px;
+}
+
+.table-header-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.table-header-info {
+    color: rgba(0, 0, 0, 0.6);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+/* Data rows */
+.table-data-row {
+    display: flex;
+}
+
+.table-data-row.row-first {
+    background-color: #ffffff;
+}
+
+.table-data-row.row-second {
+    background-color: #f1f5f9;
+}
+
+.table-data-cell {
+    display: flex;
+    align-items: flex-start;
+    padding: 8px 16px;
+    border: 1px solid #e2e8f0;
+    min-height: 40px;
+}
+
+.cell-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #18181b;
+}
+
+.cell-input {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #18181b;
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+}
+
+.cell-input::placeholder {
+    color: #737373;
+}
+
+.cell-input--empty {
+    color: #737373;
+}
+
+.submit-button-wrapper {
+    margin-top: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .enter-plan-table-wrapper {
+        overflow-x: auto;
+        align-items: flex-start;
+    }
+
+    .enter-plan-table {
+        min-width: 800px;
+    }
+}
+
+@media (max-height: 1100px) {
+    .enter-new-plan-table-wrapper {
+        padding: 28px 20px;
+        gap: 14px;
+    }
+
+    .table-header-cell {
+        padding: 6px 12px;
+        min-height: 56px;
+    }
+
+    .table-header-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .table-data-cell {
+        padding: 6px 12px;
+        min-height: 36px;
+    }
+
+    .cell-text,
+    .cell-input {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .submit-button-wrapper {
+        margin-top: 14px;
+    }
+}
+
+@media (max-height: 800px) {
+    .enter-new-plan-table-wrapper {
+        padding: 24px 16px;
+        gap: 12px;
+    }
+
+    .table-header-cell {
+        padding: 5px 10px;
+        min-height: 48px;
+    }
+
+    .table-header-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .table-header-info {
+        width: 14px;
+        height: 14px;
+    }
+
+    .table-data-cell {
+        padding: 5px 10px;
+        min-height: 32px;
+    }
+
+    .cell-text,
+    .cell-input {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .submit-button-wrapper {
+        margin-top: 12px;
+    }
+}
+
+@media (max-height: 600px) {
+    .enter-new-plan-table-wrapper {
+        padding: 16px 12px;
+        gap: 10px;
+    }
+
+    .table-header-cell {
+        padding: 4px 8px;
+        min-height: 40px;
+    }
+
+    .table-header-text {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .table-header-info {
+        width: 12px;
+        height: 12px;
+    }
+
+    .table-data-cell {
+        padding: 4px 8px;
+        min-height: 28px;
+    }
+
+    .cell-text,
+    .cell-input {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .submit-button-wrapper {
+        margin-top: 10px;
+    }
+}

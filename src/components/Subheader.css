@@ -1,0 +1,142 @@
+.subheader {
+    background-color: #e6e6e6; /* var(--sds-color-background-default-secondary-hover) */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4vh 24px;
+    gap: 2vh;
+    text-align: center;
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.subheader.big {
+    height: 419px;
+}
+
+.subheader.small {
+    height: 252px;
+}
+
+@media (max-height: 1100px) {
+    .subheader.big {
+        height: 28vh;
+        min-height: 180px;
+        max-height: 300px;
+        padding: 2vh 24px;
+    }
+}
+
+@media (max-height: 800px) {
+    .subheader.big {
+        height: 40vh;
+        min-height: 100px;
+        max-height: 200px;
+        padding: 1vh 24px;
+        gap: 0.5vh;
+    }
+
+    .subheader-title {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .subheader-subtitle {
+        font-size: 14px;
+    }
+
+    .subheader-icon {
+        display: none;
+    }
+}
+
+.subheader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* inferred gap between title and subtitle */
+}
+
+.subheader-title {
+    font-family: var(--sds-typography-title-hero-font-family, 'Inter', sans-serif);
+    font-weight: 700; /* Bold */
+    font-size: 64px; /* var(--sds-typography-title-hero-size) - guessing 64px based on "Hero" */
+    line-height: 1.2;
+    letter-spacing: -3px;
+    color: black;
+    margin: 0;
+}
+
+.subheader-subtitle {
+    font-family: var(--sds-typography-body-font-family, 'Inter', sans-serif);
+    font-weight: 400;
+    font-size: 20px; /* Subheading size usually larger than body */
+    line-height: 1.4;
+    color: #757575; /* Secondary text color */
+    margin: 0;
+}
+
+.subheader-icon {
+    color: black;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+    .subheader {
+        padding: 40px 16px;
+        height: auto !important; /* Override fixed heights on mobile */
+    }
+
+    .subheader-title {
+        font-size: 40px;
+        letter-spacing: -1px;
+    }
+
+    .subheader-subtitle {
+        font-size: 16px;
+    }
+
+    .subheader-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .subheader {
+        padding: 30px 12px;
+    }
+
+    .subheader-title {
+        font-size: 32px;
+        letter-spacing: -0.5px;
+    }
+
+    .subheader-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+    .subheader.big {
+        height: 280px;
+        padding: 3vh 24px;
+    }
+
+    .subheader-title {
+        font-size: 52px;
+    }
+}

@@ -1,0 +1,73 @@
+.arrow-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.arrow-button-icon {
+    width: 24px;
+    height: 24px;
+    color: #1e1e1e;
+    transition: color 0.2s ease;
+}
+
+.arrow-button:hover .arrow-button-icon {
+    color: #5a5a5a;
+}
+
+.arrow-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.arrow-button:disabled .arrow-button-icon {
+    color: #a0a0a0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Medium screens */
+@media (max-height: 1100px) {
+    .arrow-button {
+        width: 36px;
+        height: 36px;
+    }
+
+    .arrow-button-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Small screens (1280x720) */
+@media (max-height: 800px) {
+    .arrow-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrow-button-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Very small screens */
+@media (max-height: 600px) {
+    .arrow-button {
+        width: 24px;
+        height: 24px;
+    }
+
+    .arrow-button-icon {
+        width: 14px;
+        height: 14px;
+    }
+}

@@ -1,0 +1,247 @@
+.view-declined-plan-page {
+    min-height: 100vh;
+    background-color: #f9f8f6;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.view-declined-plan-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 40px;
+    padding-bottom: 60px;
+}
+
+.arrow-back-wrapper {
+    position: absolute;
+    left: 8px;
+    top: 81px;
+    z-index: 10;
+}
+
+@media (max-width: 900px) {
+    .arrow-back-wrapper {
+        display: none;
+    }
+}
+
+.plan-layout-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1140px;
+}
+
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.status-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #000;
+    letter-spacing: -0.48px;
+}
+
+.status-value {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.48px;
+}
+
+.status-approved {
+    color: #00992e;
+}
+
+.status-returned {
+    color: #a75300;
+}
+
+.status-declined {
+    color: #ad0003;
+}
+
+.view-declined-plan-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 600px;
+    /* Approx 13 rows */
+    margin-bottom: 30px;
+}
+
+.view-declined-plan-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Was min-width: fit-content */
+}
+
+.table-header-row {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+}
+
+.table-header-cell {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    padding: 8px 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    min-height: 64px;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+.table-header-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    /* Responsive font size */
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.8);
+    white-space: normal;
+    /* Allow wrapping */
+}
+
+.table-data-row {
+    display: flex;
+    width: 100%;
+}
+
+.table-data-row.row-first {
+    background-color: white;
+}
+
+.table-data-row.row-second {
+    background-color: #f1f5f9;
+}
+
+.table-data-cell {
+    border: 1px solid #e2e8f0;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+.table-data-cell--checkbox {
+    justify-content: center;
+}
+
+.table-data-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    /* Responsive font size */
+    line-height: 1.4;
+    color: #18181b;
+    white-space: normal;
+    /* Allow wrapping */
+}
+
+.review-section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.buttons-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* Stretch buttons to match the widest one */
+    width: fit-content;
+    /* Container becomes as wide as the widest button */
+    gap: 16px;
+    /* Space between buttons */
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .status-row {
+        align-self: center;
+        justify-content: center;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .review-section {
+        align-self: center;
+        padding-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .view-declined-plan-content {
+        padding: 0 16px;
+    }
+
+    .buttons-section {
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-height: 1100px) {
+    .view-declined-plan-content {
+        padding: 0 30px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-height: 800px) {
+    .view-declined-plan-table-wrapper {
+        padding: 28px 20px;
+        gap: 20px;
+        overflow-x: auto;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .view-declined-plan-table {
+        min-width: 800px;
+    }
+
+    .view-declined-plan-content {
+        padding: 0 20px;
+        padding-bottom: 40px;
+    }
+
+    .status-label,
+    .status-value {
+        font-size: 20px;
+    }
+}
+
+@media (max-height: 600px) {
+    .view-declined-plan-content {
+        padding: 0 16px;
+        padding-bottom: 30px;
+    }
+
+    .status-label,
+    .status-value {
+        font-size: 18px;
+    }
+}

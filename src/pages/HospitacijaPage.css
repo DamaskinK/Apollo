@@ -1,0 +1,284 @@
+.hospitacija-page {
+    min-height: 100vh;
+    background-color: #f9f8f6;
+    display: flex;
+    flex-direction: column;
+}
+
+.hospitacija-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.hospitacija-back-button {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 10;
+}
+
+.hospitacija-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 38px;
+    gap: 40px;
+}
+
+/* Table Container */
+.hospitacija-table-container {
+    width: 100%;
+    max-width: 1148px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Table Header */
+.hospitacija-table-header {
+    display: flex;
+}
+
+.hospitacija-table-th {
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0f172a;
+    white-space: nowrap;
+}
+
+/* Table Body */
+.hospitacija-table-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.hospitacija-table-row {
+    display: flex;
+    height: 40px;
+}
+
+.hospitacija-table-row.row-odd {
+    background-color: #ffffff;
+}
+
+.hospitacija-table-row.row-even {
+    background-color: #f1f5f9;
+}
+
+.hospitacija-table-td {
+    padding: 8px 16px;
+    border: 1px solid #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #18181b;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.hospitacija-table-row.row-odd .hospitacija-table-td {
+    background-color: #ffffff;
+}
+
+.hospitacija-table-row.row-even .hospitacija-table-td {
+    background-color: #f1f5f9;
+}
+
+.hospitacija-table-row {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.hospitacija-table-row:hover .hospitacija-table-td {
+    background-color: #e2e8f0;
+    /* Slightly darker on hover */
+}
+
+/* Download Button */
+.hospitacija-download-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2d64e8;
+}
+
+.hospitacija-download-btn:hover {
+    opacity: 0.8;
+}
+
+.hospitacija-download-btn svg {
+    color: #2d64e8;
+}
+
+/* No File Text */
+.hospitacija-no-file {
+    color: #a60003;
+    font-weight: 400;
+}
+
+/* Action Cell */
+/* Action Cell */
+.hospitacija-action-cell {
+    padding: 0;
+    justify-content: center;
+}
+
+.hospitacija-action-cell .small-button {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+    /* Optional: Remove border if cell has border, or keep it */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    /* Reset button padding to ensure text centering without overflow */
+}
+
+/* Create Button */
+.hospitacija-create-button {
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Medium screens */
+@media (max-height: 1100px) {
+    .hospitacija-main {
+        padding: 30px 30px;
+        gap: 30px;
+    }
+
+    .hospitacija-table-th,
+    .hospitacija-table-td {
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .hospitacija-table-row {
+        height: 36px;
+    }
+
+    .hospitacija-download-btn {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .hospitacija-download-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Small screens (1280x720) */
+@media (max-height: 800px) {
+    .hospitacija-main {
+        padding: 20px 20px;
+        gap: 20px;
+    }
+
+    .hospitacija-table-th,
+    .hospitacija-table-td {
+        padding: 4px 8px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .hospitacija-table-row {
+        height: 30px;
+    }
+
+    .hospitacija-download-btn {
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .hospitacija-download-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hospitacija-back-button {
+        top: 4px;
+        left: 4px;
+    }
+}
+
+/* Very small screens */
+@media (max-height: 600px) {
+    .hospitacija-main {
+        padding: 15px 15px;
+        gap: 15px;
+    }
+
+    .hospitacija-table-th,
+    .hospitacija-table-td {
+        padding: 3px 6px;
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .hospitacija-table-row {
+        height: 26px;
+    }
+
+    .hospitacija-download-btn {
+        font-size: 10px;
+        gap: 4px;
+    }
+
+    .hospitacija-download-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Width-based responsiveness for table */
+@media (max-width: 1200px) {
+    .hospitacija-table-container {
+        overflow-x: auto;
+        display: block;
+        width: 100%;
+    }
+
+    .hospitacija-table-header,
+    .hospitacija-table-body {
+        min-width: 800px;
+        /* Ensure content is wide enough to look good */
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+
+    .hospitacija-table-th,
+    .hospitacija-table-td {
+        padding: 4px 8px;
+        /* Compact padding */
+        font-size: 13px;
+        /* Slightly smaller text */
+    }
+
+    .hospitacija-main {
+        padding: 16px;
+    }
+}

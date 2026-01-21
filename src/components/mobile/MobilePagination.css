@@ -1,0 +1,47 @@
+.mobile-pagination-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    padding: 16px;
+    z-index: 100;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.mobile-pagination-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1e1e1e;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mobile-pagination-btn:disabled {
+    color: #a1a1aa;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.mobile-pagination-info {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1e1e1e;
+}

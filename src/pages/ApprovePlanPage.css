@@ -1,0 +1,271 @@
+.approve-plan-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f8f6;
+    position: relative;
+}
+
+.approve-plan-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.arrow-back-wrapper {
+    position: absolute;
+    top: 81px;
+    left: 8px;
+    z-index: 10;
+}
+
+@media (max-width: 900px) {
+    .arrow-back-wrapper {
+        display: none;
+    }
+}
+
+.approve-plan-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px;
+    gap: 24px;
+    overflow-y: auto;
+    max-height: 700px;
+    /* slightly taller to include wrapper padding approx */
+    width: 100%;
+    /* Ensure wrapper spans full width to allow centering */
+}
+
+.approve-plan-table {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    /* Hug content to allow centering within wrapper */
+    max-width: 1140px;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+/* Header row */
+.table-header-row {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.table-header-cell {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    min-height: 64px;
+}
+
+.table-header-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.table-header-info {
+    color: rgba(0, 0, 0, 0.6);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+/* Data rows */
+.table-data-row {
+    display: flex;
+}
+
+.table-data-row.row-first {
+    background-color: #ffffff;
+}
+
+.table-data-row.row-second {
+    background-color: #f1f5f9;
+}
+
+.table-data-cell {
+    display: flex;
+    align-items: flex-start;
+    padding: 8px 16px;
+    border: 1px solid #e2e8f0;
+    min-height: 40px;
+}
+
+.table-data-cell--checkbox {
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #18181b;
+}
+
+/* Approve form */
+.approve-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.finish-button-wrapper {
+    margin-top: 8px;
+}
+
+/* Responsive styles */
+@media (max-height: 1100px) {
+    .approve-plan-table-wrapper {
+        padding: 28px 20px;
+        gap: 20px;
+        overflow-x: auto;
+        /* Enable horizontal scroll */
+        width: 100%;
+        align-items: center;
+        /* Force center alignment */
+    }
+
+    .approve-plan-table {
+        min-width: 800px;
+        /* Force minimum width to trigger scroll if needed, but table fits content */
+    }
+
+    .table-header-cell {
+        padding: 6px 12px;
+        min-height: 56px;
+    }
+
+    .table-header-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .table-data-cell {
+        padding: 6px 12px;
+        min-height: 36px;
+    }
+
+    .cell-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .approve-form {
+        gap: 20px;
+    }
+}
+
+@media (max-height: 800px) {
+    .approve-plan-table-wrapper {
+        padding: 24px 16px;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .table-header-cell {
+        padding: 5px 10px;
+        min-height: 48px;
+    }
+
+    .table-header-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .table-data-cell {
+        padding: 5px 10px;
+        min-height: 32px;
+    }
+
+    .cell-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .approve-form {
+        gap: 16px;
+    }
+}
+
+@media (max-height: 600px) {
+    .approve-plan-table-wrapper {
+        padding: 16px 12px;
+        gap: 12px;
+        overflow-x: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .approve-plan-table {
+        min-width: 600px;
+    }
+
+    .table-header-cell {
+        padding: 4px 8px;
+        min-height: 40px;
+    }
+
+    .table-header-text {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .table-data-cell {
+        padding: 4px 8px;
+        min-height: 28px;
+    }
+
+    .cell-text {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .approve-form {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .approve-plan-table-wrapper {
+        align-items: center;
+        /* Ensure mobile cards are centered */
+    }
+
+    .approve-plan-content {
+        padding: 0 16px;
+    }
+
+    .approve-form {
+        padding: 0;
+        /* Width handled by parent */
+        box-sizing: border-box;
+        margin-bottom: 40px;
+        /* Raise button from bottom/footer */
+        /* Center form elements no more, stretch them */
+        align-items: stretch;
+    }
+
+    .finish-button-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}

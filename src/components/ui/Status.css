@@ -1,0 +1,48 @@
+.status {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.48px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Status variants */
+.status--approved {
+    color: #00992e;
+}
+
+.status--returned {
+    color: #eae439;
+}
+
+.status--declined {
+    color: #ad0003;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Medium screens */
+@media (max-height: 1100px) {
+    .status {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+    }
+}
+
+/* Small screens (1280x720) */
+@media (max-height: 800px) {
+    .status {
+        font-size: 16px;
+        letter-spacing: -0.32px;
+    }
+}
+
+/* Very small screens */
+@media (max-height: 600px) {
+    .status {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+    }
+}

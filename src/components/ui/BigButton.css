@@ -1,0 +1,103 @@
+.big-button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    color: #f5f5f5;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+/* Default state */
+.big-button--default {
+    background-color: #c9b59c;
+    border: 1px solid rgba(167, 83, 0, 0.2);
+}
+
+.big-button--default:hover {
+    background-color: #b7a38b;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.big-button--default:active {
+    background-color: #837768;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Hover variant (for controlled state) */
+.big-button--hover {
+    background-color: #b7a38b;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Active variant (for controlled state) */
+.big-button--active {
+    background-color: #837768;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Secondary variant (white/outlined) */
+.big-button--secondary {
+    background-color: #ffffff;
+    color: #c9b59c;
+    border: 1px solid #c9b59c;
+}
+
+.big-button--secondary:hover {
+    background-color: #f9f8f6;
+    border-color: #b7a38b;
+    color: #b7a38b;
+}
+
+/* Destructive variant (red/outlined) */
+.big-button--destructive {
+    background-color: #ffffff;
+    color: #ef4444;
+    border: 1px solid #ef4444;
+}
+
+.big-button--destructive:hover {
+    background-color: #fef2f2;
+    border-color: #dc2626;
+    color: #dc2626;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Medium screens */
+@media (max-height: 1100px) {
+    .big-button {
+        font-size: 18px;
+        padding: 12px 24px;
+        border-radius: 7px;
+        gap: 6px;
+    }
+}
+
+/* Small screens (1280x720) */
+@media (max-height: 800px) {
+    .big-button {
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 6px;
+        gap: 5px;
+    }
+}
+
+/* Very small screens */
+@media (max-height: 600px) {
+    .big-button {
+        font-size: 12px;
+        padding: 8px 16px;
+        border-radius: 5px;
+        gap: 4px;
+    }
+}

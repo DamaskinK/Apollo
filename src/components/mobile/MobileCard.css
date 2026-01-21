@@ -1,0 +1,64 @@
+.mobile-read-only-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mobile-read-only-card:active {
+    transform: scale(0.98);
+    background-color: #fafafa;
+}
+
+.mobile-card-row {
+    display: flex;
+    justify-content: flex-start;
+    /* Changed from space-between */
+    align-items: flex-start;
+    gap: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+.mobile-card-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.mobile-card-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    flex-shrink: 0;
+    width: 140px;
+    /* Fixed width for alignment */
+    max-width: none;
+}
+
+.mobile-card-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #0f172a;
+    text-align: left;
+    /* Changed from right */
+    word-break: break-word;
+    flex: 1;
+    /* Take remaining space */
+}
+
+.mobile-card-actions {
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px dashed #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}

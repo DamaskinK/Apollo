@@ -1,0 +1,77 @@
+.mobile-card-editor {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin: 0;
+    margin-bottom: 24px;
+    /* Space for pagination */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-field-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.mobile-field-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #1f2937;
+    background-color: #f9fafb;
+    transition: all 0.2s;
+}
+
+.mobile-field-input:focus {
+    outline: none;
+    border-color: #2d64e8;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(45, 100, 232, 0.1);
+}
+
+.mobile-checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.mobile-checkbox-label {
+    margin: 0;
+    color: #1f2937;
+}
+
+.mobile-checkbox-input {
+    width: 20px;
+    height: 20px;
+}

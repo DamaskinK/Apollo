@@ -1,0 +1,166 @@
+.home-page {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f8f6;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease;
+}
+
+.home-subheader {
+    flex-shrink: 0;
+}
+
+.home-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    padding: 16px;
+}
+
+.home-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large screens */
+@media (max-width: 1400px) {
+    .home-cards-row {
+        gap: 60px;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 1200px) {
+    .home-cards-container {
+        gap: 32px;
+    }
+
+    .home-cards-row {
+        gap: 40px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .home-cards-container {
+        gap: 24px;
+    }
+
+    .home-cards-row {
+        gap: 30px;
+    }
+
+    .home-main {
+        padding: 12px;
+    }
+}
+
+/* Small tablet */
+@media (max-width: 768px) {
+    .home-cards-container {
+        gap: 20px;
+    }
+
+    .home-cards-row {
+        gap: 20px;
+    }
+
+    .home-main {
+        padding: 8px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .home-cards-container {
+        gap: 16px;
+        padding: 0 16px;
+        width: 100%;
+    }
+
+    .home-cards-row {
+        gap: 16px;
+        flex-direction: column;
+        /* Force stack on mobile */
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .desktop-only-row {
+        display: none;
+    }
+
+    .home-main {
+        padding: 16px 0;
+        align-items: center;
+    }
+}
+
+/* Height-based responsive */
+@media (max-height: 900px) {
+    .home-cards-container {
+        gap: 32px;
+    }
+}
+
+@media (max-height: 800px) {
+    .home-cards-container {
+        gap: 24px;
+    }
+
+    .home-cards-row {
+        gap: 40px;
+    }
+
+    .home-main {
+        padding: 12px;
+    }
+}
+
+@media (max-height: 700px) {
+    .home-cards-container {
+        gap: 20px;
+    }
+
+    .home-cards-row {
+        gap: 30px;
+    }
+
+    .home-main {
+        padding: 8px;
+    }
+}
+
+@media (max-height: 600px) {
+    .home-cards-container {
+        gap: 16px;
+    }
+
+    .home-cards-row {
+        gap: 24px;
+    }
+
+    .home-main {
+        padding: 4px;
+    }
+}

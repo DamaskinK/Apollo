@@ -1,0 +1,154 @@
+.notification {
+    width: 300px;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #757575;
+    border-radius: 8px;
+}
+
+.notification-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.notification-icon {
+    color: #1e1e1e;
+    flex-shrink: 0;
+}
+
+.notification-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.notification-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #1e1e1e;
+    margin: 0;
+}
+
+.notification-message {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #1e1e1e;
+    margin: 0;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+}
+
+.notification-close:hover {
+    opacity: 0.6;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Medium screens */
+@media (max-height: 1100px) {
+    .notification {
+        width: 260px;
+        padding: 14px;
+        border-radius: 7px;
+    }
+
+    .notification-content {
+        gap: 10px;
+    }
+
+    .notification-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .notification-text {
+        gap: 3px;
+    }
+
+    .notification-title,
+    .notification-message {
+        font-size: 14px;
+    }
+
+    .notification-close svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Small screens (1280x720) */
+@media (max-height: 800px) {
+    .notification {
+        width: 220px;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .notification-content {
+        gap: 8px;
+    }
+
+    .notification-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .notification-text {
+        gap: 2px;
+    }
+
+    .notification-title,
+    .notification-message {
+        font-size: 12px;
+    }
+
+    .notification-close svg {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Very small screens */
+@media (max-height: 600px) {
+    .notification {
+        width: 180px;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    .notification-content {
+        gap: 6px;
+    }
+
+    .notification-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .notification-title,
+    .notification-message {
+        font-size: 10px;
+    }
+
+    .notification-close svg {
+        width: 10px;
+        height: 10px;
+    }
+}

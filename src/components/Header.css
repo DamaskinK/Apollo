@@ -1,0 +1,448 @@
+:root {
+    --sds-color-background-default-default: white;
+    --sds-color-border-default-default: #d9d9d9;
+    --sds-size-stroke-border: 1px;
+    --sds-size-space-200: 8px;
+    --sds-size-space-300: 12px;
+    --sds-size-space-400: 16px;
+    --sds-size-space-800: 32px;
+    --sds-size-radius-200: 8px;
+    --sds-typography-body-font-family: 'Inter', sans-serif;
+    --sds-typography-heading-font-family: 'Inter', sans-serif;
+    --button-login-background-default: #e3e3e3;
+    --button-login-border-default: #767676;
+    --button-login-text-default: #1e1e1e;
+}
+
+.header {
+    background-color: var(--sds-color-background-default-default);
+    border-bottom: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+    height: 81px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 32px; /* Top/Bottom padding handled by height + flex align */
+    gap: 24px; /* Add gap for spacing between sections */
+    transition: height 0.3s ease;
+}
+
+@media (max-height: 1100px) {
+    .header {
+        height: 70px;
+    }
+
+    .logo-image-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-height: 800px) {
+    .header {
+        height: 50px;
+        padding: 0 8px 0 16px;
+        gap: 16px;
+    }
+
+    .logo-image-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .search-input-container {
+        height: 32px;
+        padding: 6px 10px;
+    }
+
+    .search-icon-wrapper {
+        width: 20px;
+        height: 20px;
+    }
+
+    .search-input {
+        font-size: 13px;
+    }
+
+    .login-button {
+        height: 32px;
+    }
+
+    .user-avatar {
+        width: 28px;
+        height: 28px;
+    }
+
+    .user-name {
+        font-size: 12px;
+    }
+
+    .user-role {
+        font-size: 10px;
+    }
+
+    .logout-button svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Logo Section */
+.logo-section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.logo-image-wrapper {
+    width: 75px;
+    height: 75px;
+    margin-right: -10px;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden; /* Ensure image doesn't overflow if it's square */
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    pointer-events: none;
+}
+
+.logo-text {
+    width: 72px;
+    margin-right: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--sds-typography-heading-font-family);
+    font-weight: 600;
+    font-size: 24px;
+    color: black;
+    letter-spacing: -0.48px;
+    line-height: 1.2;
+}
+
+/* Search Section */
+.search-section {
+    flex-grow: 1;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center;
+    min-width: 0; /* Allow shrinking */
+}
+
+.search-input-container {
+    width: 100%;
+    max-width: 733px;
+    height: 42px;
+    background-color: var(--sds-color-background-default-default);
+    border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+    border-radius: var(--sds-size-radius-200);
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    overflow: hidden;
+}
+
+.search-icon-wrapper {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 8px; /* Add some space between icon and input */
+}
+
+.search-icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-family: var(--sds-typography-body-font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #1e1e1e;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.search-input::placeholder {
+    color: #1e1e1e; /* Match the design text color */
+}
+
+/* Auth Section */
+.auth-section {
+    height: 43px;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.login-button {
+    width: 178px;
+    height: 42px;
+    background-color: var(--button-login-background-default);
+    border: var(--sds-size-stroke-border) solid var(--button-login-border-default);
+    border-radius: var(--sds-size-radius-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px;
+    transition: background-color 0.2s;
+}
+
+.login-button:hover {
+    background-color: #cdcdcd; /* hover state from design */
+}
+
+.login-button:active {
+    background-color: #5a5a5a; /* click state from design */
+}
+
+.star-icon-wrapper {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.star-icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.login-text {
+    font-family: var(--sds-typography-body-font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--button-login-text-default);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Logged User Styles */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.user-name {
+    font-family: var(--sds-typography-body-font-family);
+    font-weight: 600;
+    font-size: 16px;
+    color: #1e1e1e;
+    line-height: 1.4;
+}
+
+.user-role {
+    font-family: var(--sds-typography-body-font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #757575;
+    line-height: 1.4;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 12px;
+    color: #757575;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-button:hover {
+    color: #1e1e1e;
+}
+
+@media (max-width: 1050px) {
+    .logo-text {
+        display: none;
+    }
+
+    .login-text {
+        display: none;
+    }
+
+    .auth-section {
+        min-width: 100px;
+    }
+
+    .login-button {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+    }
+
+    .star-icon-wrapper {
+        width: 20px;
+        height: 20px;
+    }
+
+    .user-info {
+        display: none;
+    }
+}
+@media (max-width: 1280px) {
+    .header {
+        height: 75px;
+        gap: 16px;
+    }
+
+    .logo-image-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 16px;
+        gap: 12px;
+    }
+
+    .logo-image-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+
+    .auth-section {
+        min-width: 90px;
+    }
+
+    .search-input-container {
+        max-width: none;
+        height: 38px;
+        padding: 8px 12px;
+    }
+
+    .search-icon-wrapper {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+    }
+
+    .search-input {
+        font-size: 14px;
+    }
+
+    .login-button {
+        height: 38px;
+    }
+
+    .user-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logout-button {
+        margin-left: 8px;
+    }
+
+    .logout-button svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 8px;
+        gap: 8px;
+    }
+
+    .logo-image-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .auth-section {
+        min-width: 70px;
+    }
+
+    .search-input-container {
+        height: 32px;
+        padding: 6px 8px;
+    }
+
+    .search-icon-wrapper {
+        width: 20px;
+        height: 20px;
+        margin-right: 4px;
+    }
+
+    .search-input {
+        font-size: 13px;
+    }
+
+    .login-button {
+        width: 36px;
+        height: 32px;
+    }
+
+    .star-icon-wrapper {
+        width: 16px;
+        height: 16px;
+    }
+
+    .user-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logout-button {
+        margin-left: 4px;
+        padding: 2px;
+    }
+
+    .logout-button svg {
+        width: 18px;
+        height: 18px;
+    }
+}

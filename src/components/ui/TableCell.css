@@ -1,0 +1,219 @@
+.table-cell {
+    width: 175px;
+    min-height: 40px;
+    padding: 8px 16px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+}
+
+/* Background variants */
+.table-cell--title-bg {
+    background-color: #ffffff;
+}
+
+.table-cell--row-first {
+    background-color: #f1f5f9;
+}
+
+.table-cell--row-second {
+    background-color: #ffffff;
+}
+
+/* Title text */
+.table-cell-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0f172a;
+    white-space: nowrap;
+}
+
+/* Title with info */
+.table-cell-title-info {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.table-cell-info-icon {
+    color: #0f172a;
+    flex-shrink: 0;
+}
+
+/* Regular text */
+.table-cell-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #18181b;
+    white-space: nowrap;
+}
+
+.table-cell-text--empty {
+    color: #737373;
+}
+
+/* Download link */
+.table-cell-download {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-cell-download-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2d64e8;
+    white-space: nowrap;
+}
+
+.table-cell-download-btn {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2d64e8;
+}
+
+.table-cell-download-btn:hover {
+    opacity: 0.8;
+}
+
+/* No download text */
+.table-cell-no-download {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #a60003;
+    white-space: nowrap;
+}
+
+/* Button wrapper */
+.table-cell-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Checkbox wrapper */
+.table-cell-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Medium screens */
+@media (max-height: 1100px) {
+    .table-cell {
+        width: 150px;
+        min-height: 36px;
+        padding: 6px 12px;
+    }
+
+    .table-cell-title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .table-cell-text,
+    .table-cell-download-text,
+    .table-cell-no-download {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .table-cell-download-btn {
+        width: 20px;
+        height: 20px;
+    }
+
+    .table-cell-info-icon {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Small screens (1280x720) */
+@media (max-height: 800px) {
+    .table-cell {
+        width: 120px;
+        min-height: 30px;
+        padding: 4px 8px;
+    }
+
+    .table-cell-title {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .table-cell-text,
+    .table-cell-download-text,
+    .table-cell-no-download {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .table-cell-download {
+        gap: 6px;
+    }
+
+    .table-cell-download-btn {
+        width: 16px;
+        height: 16px;
+    }
+
+    .table-cell-info-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .table-cell-title-info {
+        gap: 2px;
+    }
+}
+
+/* Very small screens */
+@media (max-height: 600px) {
+    .table-cell {
+        width: 100px;
+        min-height: 26px;
+        padding: 3px 6px;
+    }
+
+    .table-cell-title {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .table-cell-text,
+    .table-cell-download-text,
+    .table-cell-no-download {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .table-cell-download-btn {
+        width: 14px;
+        height: 14px;
+    }
+
+    .table-cell-info-icon {
+        width: 10px;
+        height: 10px;
+    }
+}

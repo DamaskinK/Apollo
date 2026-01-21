@@ -1,0 +1,77 @@
+.add-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.2s ease;
+}
+
+.add-button:hover .add-button-icon-wrapper {
+    border-color: #595959;
+}
+
+.add-button:hover .add-button-icon {
+    color: #595959;
+}
+
+.add-button:hover .add-button-label {
+    color: #595959;
+}
+
+.add-button-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.add-button-icon {
+    color: #000000;
+    transition: color 0.2s ease;
+}
+
+.add-button-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    transition: color 0.2s ease;
+}
+
+/* Responsive styles */
+@media (max-height: 1100px) {
+    .add-button-label {
+        font-size: 15px;
+    }
+}
+
+@media (max-height: 800px) {
+    .add-button-label {
+        font-size: 14px;
+    }
+    
+    .add-button-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-height: 600px) {
+    .add-button-label {
+        font-size: 13px;
+    }
+    
+    .add-button-icon {
+        width: 18px;
+        height: 18px;
+    }
+}

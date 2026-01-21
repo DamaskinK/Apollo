@@ -29,6 +29,7 @@ Hospitacija is a peer observation process where teachers observe each other's cl
 ## 📺 Demo
 
 Watch the full demo video: [Apollo Demo on YouTube](https://youtu.be/Cc3RsriVOZg)
+Figma : [Link](https://www.figma.com/board/9hCtogy1Vks4CQWPdFycOl/UX3-Damaskin-Kostiantyn?node-id=0-1&t=4dddF90Ag9LRiLZm-1)
 
 ---
 

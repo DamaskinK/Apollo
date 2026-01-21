@@ -26,6 +26,12 @@ Hospitacija is a peer observation process where teachers observe each other's cl
 
 ---
 
+## 📺 Demo
+
+Watch the full demo video: [Apollo Demo on YouTube](https://youtu.be/Cc3RsriVOZg)
+
+---
+
 ## ✨ Features
 
 ### 🎯 Core Functionality
@@ -202,59 +208,6 @@ Apollo/
 
 ---
 
-## 📝 Available Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server with hot reload |
-| `npm run build` | Build production-ready application |
-| `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint code analysis |
-
----
-
-## 💻 Usage
-
-### Getting Started
-
-1. **Login**
-   - Click "Login" button in the header
-   - Use demo credentials (for prototype)
-   - System logs you in as "Katarína Nováková" (Department Representative)
-
-2. **Navigate to Hospitacija Module**
-   - Click on the "HP" (Hospitacija) card from the home page
-   - View the dashboard with all observation plans
-
-3. **Create a New Plan**
-   - Click "Create new hospitacija plan"
-   - Enter observation details:
-     - Teacher information
-     - Observer information
-     - Week of semester
-     - Subject
-     - Purpose and method
-   - Submit for approval
-
-4. **Approve/Manage Plans** (Admin Role)
-   - View submitted plans
-   - Approve, decline, or return for corrections
-   - Add comments for returned/declined plans
-   - Download approved plan files
-
-5. **View and Correct Plans**
-   - Review declined/returned plans
-   - Make necessary corrections
-   - Resubmit for approval
-
-### User Roles
-
-- **Department Head**: Create and submit observation plans
-- **Administrator/Approver**: Review and approve/decline plans
-- **Teacher**: View plans and make corrections when needed
-
----
-
 ## 🎯 Key Components
 
 ### Pages
@@ -310,52 +263,6 @@ Apollo is built with a mobile-first approach:
 
 ---
 
-## 🚧 Roadmap
-
-### Current Status
-- ✅ Hospitacija Module (Fully Implemented)
-- 🚧 Erasmus Module (Planned)
-- 🚧 ISP Module (Planned)
-
-### Future Enhancements
-- [ ] Backend API integration
-- [ ] Database connectivity
-- [ ] File upload functionality
-- [ ] Advanced search and filtering
-- [ ] Report generation
-- [ ] Email notifications
-- [ ] Calendar integration
-- [ ] Multi-language support
-
----
-
-## 🤝 Contributing
-
-This is a portfolio/prototype project. If you'd like to contribute or have suggestions:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is a prototype/portfolio piece. Please contact for licensing information.
-
----
-
-## 👤 Author
-
-**Your Name**
-
-- Portfolio: [Your Portfolio URL]
-- LinkedIn: [Your LinkedIn]
-- GitHub: [@YourGitHub]
-
----
 
 ## 🙏 Acknowledgments
 
@@ -366,11 +273,6 @@ This project is a prototype/portfolio piece. Please contact for licensing inform
 
 ---
 
-## 📺 Demo
-
-Watch the full demo video: [Apollo Demo on YouTube](https://youtu.be/Cc3RsriVOZg)
-
----
 
 <div align="center">
 
